@@ -1,2 +1,9 @@
-console.log('Hello, world!');
-console.log('Test OK dev2');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const el = <h1>Hello, wrld!</h1>;
+
+ReactDOM.render(el,
+    document.getElementById('root'));
+
+console.log('test OK');
