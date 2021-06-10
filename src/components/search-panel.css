@@ -1,0 +1,6 @@
+.search-panel {
+    display: flex;
+    width: auto;
+    flex-grow: 1;
+    margin-right: 3px;
+}
