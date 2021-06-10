@@ -19,7 +19,7 @@ const TodoListItem = ({ label, important = false }) => {
 
       <button type="button"
               className="btn btn-outline-success btn-m float-right">
-        <i className="fas fa-exclamation" />
+        <i className="fa fa-exclamation" />
       </button>
       <button type="button"
               className="btn btn-outline-danger btn-m float-right">
