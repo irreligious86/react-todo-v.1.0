@@ -1,0 +1,12 @@
+.search-panel {
+    display: flex;
+
+    width: auto;
+    flex-grow: 1;
+    margin-right: 3px;
+    padding: 8px 0;
+}
+
+.search-input {
+    width: auto;
+}
