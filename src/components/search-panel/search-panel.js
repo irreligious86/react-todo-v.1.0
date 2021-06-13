@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemStatusFilter from "../item-status-filter/item-status-filter";
 import './search-panel.css';
 
 const SearchPanel = () => {
@@ -11,7 +10,6 @@ const SearchPanel = () => {
             <input type="text"
                    className="form-control search-input"
                    placeholder={searchText}/>
-            <ItemStatusFilter/>
         </div>
     );
 };
