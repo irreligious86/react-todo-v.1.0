@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import AppHeader from "../app-header";
 import SearchPanel from "../search-panel";
 import TodoList from "../todo-list";
+import ItemStatusFilter from "../item-status-filter";
+import ItemAddForm from "../item-add-form";
 import './app.css';
 
 export default class App extends Component {
@@ -17,11 +19,11 @@ export default class App extends Component {
 
     deleteItem = (id) => {
 
-        this.setState(({ todoData }) => {
+        this.setState(({todoData}) => {
             const idx = todoData.findIndex((el) => el.id === id);
 
             const before = todoData.slice(0, idx);
-            const after = todoData.slice(idx+1);
+            const after = todoData.slice(idx + 1);
             const newArray = [...before, ...after];
 
             return {
@@ -30,15 +32,22 @@ export default class App extends Component {
         });
     };
 
+    addItem = (text) => {
+        console.log('Added', text);
+    }
+
     render() {
         return (
             <div>
-                <AppHeader/>
-                <SearchPanel/>
-
+                <AppHeader done={3} toDo={1}/>
+                <div className="top-panel d-flex">
+                    <SearchPanel/>
+                    <ItemStatusFilter/>
+                </div>
                 <TodoList
                     todos={this.state.todoData}
-                    onDeleted={ this.deleteItem }/>
+                    onDeleted={this.deleteItem} />
+                <ItemAddForm onItemAdded={this.addItem}/>
             </div>
         );
     }
